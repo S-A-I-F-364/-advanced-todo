@@ -15,7 +15,7 @@ body{
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    width: min(600px, 90%);
+    width: clamp(350px, 90vw, 700px);
     border: 2PX solid black;
     max-height: max-content;
     box-shadow: 4px 6px 7px whitesmoke,-4px -6px 7px rgb(222, 117, 52);

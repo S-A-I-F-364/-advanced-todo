@@ -84,9 +84,8 @@ li{
     margin-bottom: 20px;
     margin-left: 9px;
     background:linear-gradient(135deg,rgb(236, 109, 12),rgb(239, 231, 239));
-    width: 100%;
-    box-sizing: border-box;
-    padding: 15px;
+    width: 99%;
+    padding: 16px;
     font-size: 15px;
     border-radius: 12px;
     transition: 0.3s;

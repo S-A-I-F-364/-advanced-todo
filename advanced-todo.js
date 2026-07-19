@@ -212,10 +212,14 @@ function loadSavedData() {
     taskList.innerHTML = localStorage.getItem("task");
 
     firstContainerColor =
-        localStorage.getItem("contcolor1") || "#d0cbd0";
+        localStorage.getItem("contcolor1") ;
 
     secondContainerColor =
-        localStorage.getItem("contcolor2") || "#bc6320";
+        localStorage.getItem("contcolor2") ;
+  
+  firstTaskColor = localStorage.getItem("taskColor1") ;
+  secondTaskColor = localStorage.getItem("taskColor2") ;
+    
 
     updateGradient();
 

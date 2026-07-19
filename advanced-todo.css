@@ -15,7 +15,7 @@ body{
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    max-width: 60%;
+    width: min(600px, 90%);
     border: 2PX solid black;
     max-height: max-content;
     box-shadow: 4px 6px 7px whitesmoke,-4px -6px 7px rgb(222, 117, 52);
@@ -84,7 +84,8 @@ li{
     margin-bottom: 20px;
     margin-left: 9px;
     background:linear-gradient(135deg,rgb(236, 109, 12),rgb(239, 231, 239));
-    width:99% ;
+    width: 100%;
+    box-sizing: border-box;
     padding: 15px;
     font-size: 15px;
     border-radius: 12px;
@@ -195,4 +196,84 @@ label{
 
 .rotate{
     transform: rotate(180deg);
+}
+
+
+@media (max-width: 768px) {
+
+    body{
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .todo-cont{
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin-top: 80px;
+    }
+
+    h1{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .taskcontainer-btns{
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .taskcontainer-btns button{
+        width: 100%;
+    }
+
+    #task-list{
+        width: 100%;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    li{
+        width: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
+        padding: 12px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .task{
+        font-size: 15px;
+    }
+
+    label{
+        position: static;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    #slide-btn{
+        top: 15px;
+        right: 15px;
+    }
+
+    .slide-container{
+        right: 10px;
+        left: 10px;
+        width: auto;
+        font-size: 14px;
+    }
+
+    .slide-container input{
+        width: 100%;
+    }
+
 }

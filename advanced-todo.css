@@ -15,7 +15,7 @@ body{
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    width: 60%;
+    width: clamp(350px, 90vw, 700px);
     border: 2PX solid black;
     max-height: max-content;
     box-shadow: 4px 6px 7px whitesmoke,-4px -6px 7px rgb(222, 117, 52);
@@ -199,33 +199,45 @@ label{
 }
 
 
-@media (max-width: 900px) {
+/* ============================= */
+/*          Mobile View          */
+/* ============================= */
+
+@media (max-width:768px){
 
     body{
+        margin: 0;
         padding: 20px;
-        align-items: flex-start;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .todo-cont{
-        width: 100%;
-        max-width: 100%;
-        padding: 20px;
-        margin-top: 80px;
-        
+        width: 95%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 25px;
+        box-sizing: border-box;
     }
 
     h1{
-        font-size: 1.7rem;
+        font-size: 2rem;
         text-align: center;
     }
 
     input{
         width: 100%;
         box-sizing: border-box;
+        font-size: 16px;
     }
 
     .taskcontainer-btns{
         width: 100%;
+        display: flex;
         flex-direction: column;
         gap: 15px;
     }
@@ -236,8 +248,8 @@ label{
 
     #task-list{
         width: 100%;
-        margin-right: 0;
         padding: 0;
+        margin: 20px 0 0;
     }
 
     li{
@@ -245,36 +257,38 @@ label{
         margin-left: 0;
         box-sizing: border-box;
         padding: 12px;
-        gap: 10px;
-        align-items: center;
     }
 
     .task{
-        font-size: 15px;
-    }
-
-    label{
-        position: static;
-        display: block;
-        text-align: center;
-        margin-bottom: 10px;
-        color: white;
+        font-size: 16px;
     }
 
     #slide-btn{
+        position: fixed;
         top: 15px;
         right: 15px;
+        z-index: 1000;
     }
 
-    .slide-container{
-        right: 10px;
-        left: 10px;
-        width: auto;
+    label{
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        right: 70px;
         font-size: 14px;
+        color: white;
     }
 
-    .slide-container input{
-        width: 100%;
+    
+    .slide-container{
+        position: fixed;
+        top: 70px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-sizing: border-box;
     }
 
 }

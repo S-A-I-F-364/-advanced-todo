@@ -15,7 +15,7 @@ body{
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    width: clamp(350px, 90vw, 700px);
+    width: 60%;
     border: 2PX solid black;
     max-height: max-content;
     box-shadow: 4px 6px 7px whitesmoke,-4px -6px 7px rgb(222, 117, 52);
@@ -199,7 +199,7 @@ label{
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
     body{
         padding: 20px;
@@ -211,6 +211,7 @@ label{
         max-width: 100%;
         padding: 20px;
         margin-top: 80px;
+        
     }
 
     h1{
